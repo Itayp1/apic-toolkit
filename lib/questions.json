@@ -1,0 +1,11 @@
+{
+  "chooseOperation": {
+    "name": "operation",
+    "message": "select operation",
+    "choices": ["yaml2scripts", "scripts2yaml"]
+  },
+  "chooseYamlFile": {
+    "name": "yamlFile",
+    "message": "select yaml file"
+  }
+}

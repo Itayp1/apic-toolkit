@@ -28,7 +28,7 @@ x-ibm-configuration:
       - gatewayscript:
           title: first
           version: 1.0.0
-          source: "console.log(\"first\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\n"
+          source: "console.log(\"first1111111111\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\n"
       - xslt:
           title: xsltcheck
           input: false
@@ -74,7 +74,7 @@ x-ibm-configuration:
             - gatewayscript:
                 title: conditional
                 version: 1.0.0
-                source: "const conditional = 8;\r\n"
+                source: const conditional = 5
           version: 1.0.0
     catch: []
   phase: realized
