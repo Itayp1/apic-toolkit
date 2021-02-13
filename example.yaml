@@ -1,0 +1,96 @@
+swagger: "2.0"
+info:
+  x-ibm-name: mock
+  title: mock
+  version: 1.0.0
+schemes:
+  - https
+host: $(catalog.host)
+basePath: /mock
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+security:
+  - clientIdHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  assembly:
+    execute:
+      - gatewayscript:
+          title: first
+          version: 1.0.0
+          source: "console.log(\"first\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\nconsole.log(\"first\");\r\n"
+      - xslt:
+          title: xsltcheck
+          input: false
+          version: 1.0.0
+          source: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<xsl:stylesheet version=\"1.0\"\r\n  xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"\r\n  xmlns:dp=\"http://www.datapower.com/extensions\"\r\n  xmlns:func=\"http://exslt.org/functions\"\r\n  xmlns:apim=\"http://www.ibm.com/apimanagement\" extension-element-prefixes=\"dp func apim\">\r\n\r\n  <!-- Contains the APIM functions -->\r\n  <xsl:import href=\"local:///isp/policy/apim.custom.xsl\" />\r\n\r\n  <xsl:template match=\"/\">\r\n    <xsl:variable name=\"p\" select=\"apim:policyProperties()\" />\r\n    <xsl:message>\r\n      The value of my input property is\r\n      <xsl:value-of select=\"$p/a_property\" />\r\n    </xsl:message>\r\n  </xsl:template>\r\n\r\n</xsl:stylesheet>"
+      - if:
+          title: iftrue
+          condition: "true"
+          execute: []
+          version: 1.0.0
+      - operation-switch:
+          title: operation-switch
+          case:
+            - operations:
+                - verb: get
+                  path: /test
+              execute: []
+            - operations:
+                - verb: get
+                  path: /todo
+              execute:
+                - gatewayscript:
+                    title: printtodo
+                    version: 1.0.0
+                    source: "const fs = require(\"fs\")\r\n// require(\"./ssss\")\r\nconst yaml = require('js-yaml');\r\n\r\nlet file = fs.readFileSync(\"./sdsdsd.js\" , \"utf8\")\r\n\r\nfile = yaml.dump({file}, {\r\n    flowLevel: 3,\r\n    styles: {\r\n      '!!int'  : 'hexadecimal',\r\n      '!!null' : 'camelcase'\r\n    }\r\n  })\r\n\r\nfs.writeFileSync(\"ssss.txt\" ,file.toString())\r\nconsole.log(file)\r\n\r\n\r\n"
+          otherwise: []
+          version: 1.0.0
+      - switch:
+          title: switchtest
+          case:
+            - condition: ((request.verb==='GET')&&(api.operation.path==='/test'))
+              execute: []
+            - otherwise: []
+          version: 1.0.0
+      - gatewayscript:
+          title: printstaff
+          version: 1.0.0
+          source: "session.output.write({ newJSon: \"token///chipopo \"});\r\napim.gfhgfhgfh11('application/json'); \r\npopo=4\r\npopi=1"
+      - if:
+          title: if
+          condition: "true"
+          execute:
+            - gatewayscript:
+                title: conditional
+                version: 1.0.0
+                source: const conditional = 5
+          version: 1.0.0
+    catch: []
+  phase: realized
+  categories:
+    - 1wqqw
+  gateway: datapower-gateway
+paths:
+  /test:
+    get:
+      responses:
+        "200":
+          description: 200 OK
+  /todo:
+    get:
+      responses:
+        "200":
+          description: 200 OK
+definitions: {}
+tags: []
