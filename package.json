@@ -1,11 +1,13 @@
 {
-  "name": "apiconnect-devops",
-  "version": "1.0.0",
+  "name": "apic-toolkit",
+  "version": "1.0.3",
   "description": "",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "start": "node lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "apic-toolkit": "./bin/apic-toolkit.js"
   },
   "repository": {
     "type": "git",
@@ -13,6 +15,7 @@
   },
   "author": "peretz-itay",
   "license": "ISC",
+  "preferGlobal": true,
   "dependencies": {
     "enquirer": "^2.3.6",
     "js-yaml": "^4.0.0"
