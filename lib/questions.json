@@ -2,7 +2,7 @@
   "chooseOperation": {
     "name": "operation",
     "message": "select operation",
-    "choices": ["yaml2scripts", "scripts2yaml"]
+    "choices": ["yaml2scripts", "scripts2yaml", "publish"]
   },
   "chooseYamlFile": {
     "name": "yamlFile",
