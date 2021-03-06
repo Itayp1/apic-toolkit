@@ -1,10 +1,9 @@
 {
   "name": "apic-toolkit",
-  "version": "1.0.111",
+  "version": "1.0.112",
   "description": "",
   "main": "./lib/index.js",
-  	"funding": "https://github.com/Itayp1/apic-toolkit",
-
+  "funding": "https://github.com/Itayp1/apic-toolkit",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
