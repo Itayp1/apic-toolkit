@@ -80,11 +80,11 @@ $ npm install apiconnect
 
 ## ❯ Prompts
 
-This section is about Enquirer's prompts: what they look like, how they work, how to run them, available options, and how to customize the prompts or create your own prompt concept.
+This section is about Apic-toolkit prompts: what they look like, how they work, how to run them, available options.
 
 ### Built-in prompts
 
-- [AutoComplete Prompt](#autocomplete-prompt)
+- [Yaml2Script](#autocomplete-prompt)
 - [BasicAuth Prompt](#basicauth-prompt)
 - [Confirm Prompt](#confirm-prompt)
 - [Form Prompt](#form-prompt)
@@ -102,7 +102,7 @@ This section is about Enquirer's prompts: what they look like, how they work, ho
 - [Snippet Prompt](#snippet-prompt)
 - [Toggle Prompt](#toggle-prompt)
 
-### AutoComplete Prompt
+### Yaml2Script
 
 Prompt that auto-completes as the user types, and returns the selected value as a string.
 
