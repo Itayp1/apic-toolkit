@@ -1,6 +1,6 @@
 {
   "name": "apic-toolkit",
-  "version": "1.0.7",
+  "version": "1.0.111",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
