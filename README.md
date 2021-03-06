@@ -85,7 +85,7 @@ This section is about Enquirer's prompts: what they look like, how they work, ho
 **Getting started with Enquirer's prompts**
 
 - [Prompt](#prompt) - The base `Prompt` class used by other prompts
-  - [Prompt Options](#prompt-options)
+  - [publishing api](#prompt-options)
 - [Built-in prompts](#built-in-prompts)
 - [Prompt Types](#prompt-types) - The base `Prompt` class used by other prompts
 - [Custom prompts](#%E2%9D%AF-custom-prompts) - Enquirer 2.0 introduced the concept of prompt "types", with the goal of making custom prompts easier than ever to create and use.
@@ -101,7 +101,7 @@ class MyCustomPrompt extends Prompt {}
 
 See the documentation for [creating custom prompts](#-custom-prompts) to learn more about how this works.
 
-#### Prompt Options
+#### publishing api
 
 Each prompt takes an options object (aka "question" object), that implements the following interface:
 
