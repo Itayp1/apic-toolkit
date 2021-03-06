@@ -85,22 +85,9 @@ This section is about Apic-toolkit prompts: what they look like, how they work, 
 ### Built-in prompts
 
 - [Yaml2Script](#autocomplete-prompt)
-- [BasicAuth Prompt](#basicauth-prompt)
-- [Confirm Prompt](#confirm-prompt)
-- [Form Prompt](#form-prompt)
-- [Input Prompt](#input-prompt)
-- [Invisible Prompt](#invisible-prompt)
-- [List Prompt](#list-prompt)
-- [MultiSelect Prompt](#multiselect-prompt)
-- [Numeral Prompt](#numeral-prompt)
-- [Password Prompt](#password-prompt)
-- [Quiz Prompt](#quiz-prompt)
-- [Survey Prompt](#survey-prompt)
-- [Scale Prompt](#scale-prompt)
-- [Select Prompt](#select-prompt)
-- [Sort Prompt](#sort-prompt)
-- [Snippet Prompt](#snippet-prompt)
-- [Toggle Prompt](#toggle-prompt)
+- [Script2Yaml](#basicauth-prompt)
+- [publishing Api](#confirm-prompt)
+- [Generate Configuration Yaml](#form-prompt)
 
 ### Yaml2Script
 
@@ -113,43 +100,20 @@ Prompt that auto-completes as the user types, and returns the selected value as 
 **Example Usage**
 
 ```js
-const { AutoComplete } = require('enquirer');
 
-const prompt = new AutoComplete({
-  name: 'flavor',
-  message: 'Pick your favorite flavor',
-  limit: 10,
-  initial: 2,
-  choices: ['Almond', 'Apple', 'Banana', 'Blackberry', 'Blueberry', 'Cherry', 'Chocolate', 'Cinnamon', 'Coconut', 'Cranberry', 'Grape', 'Nougat', 'Orange', 'Pear', 'Pineapple', 'Raspberry', 'Strawberry', 'Vanilla', 'Watermelon', 'Wintergreen'],
-});
-
-prompt
-  .run()
-  .then((answer) => console.log('Answer:', answer))
-  .catch(console.error);
 ```
 
-**AutoComplete Options**
-
-| Option      | Type       | Default                                                             | Description                                                                                                                                                         |
-| ----------- | ---------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `highlight` | `function` | `dim` version of primary style                                      | The color to use when "highlighting" characters in the list that match user input.                                                                                  |
-| `multiple`  | `boolean`  | `false`                                                             | Allow multiple choices to be selected.                                                                                                                              |
-| `suggest`   | `function` | Greedy match, returns true if choice message contains input string. | Function that filters choices. Takes user input and a choices array, and returns a list of matching choices.                                                        |
-| `initial`   | `number`   | 0                                                                   | Preselected item in the list of choices.                                                                                                                            |
-| `footer`    | `function` | None                                                                | Function that displays [footer text](https://github.com/enquirer/enquirer/blob/6c2819518a1e2ed284242a99a685655fbaabfa28/examples/autocomplete/option-footer.js#L10) |
+**Script2Yaml**
 
 **Related prompts**
 
 - [Select](#select-prompt)
-- [MultiSelect](#multiselect-prompt)
-- [Survey](#survey-prompt)
 
 **↑ back to:** [Getting Started](#-getting-started) · [Prompts](#-prompts)
 
 ---
 
-### BasicAuth Prompt
+### publishing Api
 
 Prompt that asks for username and password to authenticate the user. The default implementation of `authenticate` function in `BasicAuth` prompt is to compare the username and password with the values supplied while running the prompt. The implementer is expected to override the `authenticate` function with a custom logic such as making an API request to a server to authenticate the username and password entered and expect a token back.
 
@@ -180,7 +144,7 @@ prompt
 
 ---
 
-### Confirm Prompt
+### Generate Configuration Yaml
 
 Prompt that returns `true` or `false`.
 
