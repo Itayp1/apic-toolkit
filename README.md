@@ -7,9 +7,7 @@
 	<br>
 </h1>
 
-<p align="center">
 [![npm dependents](https://badgen.net/npm/dependents/apic-toolkit)](https://www.npmjs.com/package/chalk?activeTab=dependents) [![Downloads](https://badgen.net/npm/dt/apic-toolkit)](https://www.npmjs.com/package/apic-toolkit)
-</p>
 
 <br>
 <br>
