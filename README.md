@@ -13,7 +13,7 @@
 <br>
 
 <p align="center">
-  <b>Api connect  CLI that will helo ypu to develop.</b><br>
+  <b>Api connect  CLI that will help you to develop.</b><br>
 </p>
 
 <br>
