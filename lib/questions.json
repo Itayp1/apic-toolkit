@@ -2,10 +2,62 @@
   "chooseOperation": {
     "name": "operation",
     "message": "select operation",
-    "choices": ["yaml2scripts", "scripts2yaml", "publish"]
+    "choices": ["Yaml2scripts", "Scripts2yaml", "Publish", "Login", "Generate Configuration File"]
   },
   "chooseYamlFile": {
     "name": "yamlFile",
     "message": "select yaml file"
+  },
+  "configurationDetails": [
+    {
+      "type": "input",
+      "name": "productName",
+      "message": "Enter the product Name?"
+    },
+    {
+      "type": "input",
+      "name": "productVersion",
+      "message": "Enter the product Version"
+    },
+    {
+      "type": "input",
+      "name": "ApiName",
+      "message": "Enter the Api Name"
+    },
+    {
+      "type": "input",
+      "name": "ApiVersion",
+      "message": "Enter the Api Version"
+    },
+    {
+      "type": "input",
+      "name": "organization",
+      "message": "Enter organization in the development"
+    },
+    {
+      "type": "input",
+      "name": "catalog",
+      "message": "Enter catalog in development"
+    },
+    {
+      "type": "input",
+      "name": "space",
+      "message": "if youre catalog have a space write the space name else write false or just click on enter"
+    },
+    {
+      "type": "input",
+      "name": "apiKey",
+      "message": "Enter apiKey in development"
+    },
+    {
+      "type": "input",
+      "name": "server",
+      "message": "Enter the server name Example: apic.blumix.com"
+    }
+  ],
+  "fiilConfiguration": {
+    "name": "IsDefault",
+    "message": "Do You want to enter fill the configuration file from the Cli",
+    "choices": ["Yes", "No"]
   }
 }
