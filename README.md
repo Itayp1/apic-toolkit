@@ -39,21 +39,8 @@ Created by [itayp1][itay] , Apic-toolkit is fast, easy to use, and lightweight, 
 - **Well tested** - All prompts are well-tested, and tests are easy to create without having to use brittle, hacky solutions to spy on prompts or "inject" values.
 - **Examples** - There are numerous [examples](examples) available to help you get started.
 
-If you like Enquirer, please consider starring or tweeting about this project to show your support. Thanks!
+If you like apic-toolkit, please consider starring to show your support. Thanks!
 
-[issue]: https://github.com/enquirer/enquirer/issues/new
-[pulls]: https://github.com/enquirer/enquirer/pulls
-[jon]: https://github.com/jonschlinkert
-[brian]: https://github.com/doowb
-
-<br>
-
-<p align="center">
-  <b>>_ Ready to start making prompts your users will love? ▌</b><br>
-  <img src="https://raw.githubusercontent.com/enquirer/enquirer/master/media/heartbeat.gif" alt="Enquirer Select Prompt with heartbeat example" width="750">
-</p>
-
-<br>
 <br>
 
 ## ❯ Getting started
@@ -79,20 +66,17 @@ Get started with Enquirer, the most powerful and easy-to-use Node.js library for
 Install with [npm](https://www.npmjs.com/):
 
 ```sh
-$ npm install enquirer --save
+$ npm install apic-toolkit -g
 ```
 
-Install with [yarn](https://yarnpkg.com/en/):
+## ❯ Prerequisite
+
+You need to install the apiconnect tool if you want to use the publishing option in this product
+to intall the apiconnect use the following command
 
 ```sh
-$ yarn add enquirer
+$ npm install apiconnect
 ```
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/enquirer/enquirer/master/media/npm-install.gif" alt="Install Enquirer with NPM" width="750">
-</p>
-
-_(Requires Node.js 8.6 or higher. Please let us know if you need support for an earlier version by creating an [issue](../../issues/new).)_
 
 <br>
 
