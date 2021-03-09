@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+
+  "items": {
+    "anyOf": [
+      {
+        "type": "object",
+        "required": ["space", "catalog", "organization", "server", "apiKey"],
+        "properties": {
+          "space": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 2
+              },
+              {
+                "type": "boolean"
+              }
+            ]
+          },
+          "catalog": {
+            "type": "string",
+            "minLength": 2
+          },
+          "organizations": {
+            "type": "string",
+            "minLength": 2
+          },
+          "server": {
+            "type": "string",
+            "minLength": 2
+          },
+          "apiKey": {
+            "type": "string",
+            "minLength": 2
+          }
+        },
+        "additionalProperties": true
+      }
+    ]
+  }
+}

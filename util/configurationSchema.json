@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/envSchema.json",
+  "type": "object",
+  "required": ["configuration"],
+  "properties": {
+    "configuration": {
+      "$id": "#/properties/configuration",
+      "type": "object",
+      "required": ["product", "api", "env"],
+      "properties": {
+        "product": {
+          "$id": "#/properties/configuration/properties/product",
+          "type": "object",
+          "minLength": 2,
+          "required": ["name", "version"],
+          "properties": {
+            "name": {
+              "$id": "#/properties/configuration/properties/product/properties/name",
+              "type": "string",
+              "minLength": 2
+            },
+            "version": {
+              "$id": "#/properties/configuration/properties/product/properties/version",
+              "type": "string",
+              "minLength": 2
+            }
+          },
+          "additionalProperties": true
+        },
+        "api": {
+          "$id": "#/properties/configuration/properties/api",
+          "type": "object",
+          "minLength": 2,
+          "required": ["name", "version"],
+          "properties": {
+            "name": {
+              "$id": "#/properties/configuration/properties/api/properties/name",
+              "type": "string",
+              "minLength": 2
+            },
+            "version": {
+              "$id": "#/properties/configuration/properties/api/properties/version",
+              "type": "string",
+              "minLength": 2
+            }
+          },
+          "additionalProperties": true
+        },
+        "env": {
+          "$id": "#/properties/configuration/properties/env",
+          "type": "object",
+
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
