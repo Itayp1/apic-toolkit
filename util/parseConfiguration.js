@@ -13,7 +13,7 @@ const parseConfiguration = () => {
       const configurationFile = yaml.load(configurationYaml);
       if (!configurationFile.configuration) {
         bad_format_msg('configuration root element is missing from configuration.yaml');
-        process.exit(0);
+        process.exit(1);
       }
       validate(configurationSchema, configurationFile);
       const {

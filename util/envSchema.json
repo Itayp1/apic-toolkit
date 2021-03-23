@@ -9,7 +9,8 @@
     "anyOf": [
       {
         "type": "object",
-        "required": ["space", "catalog", "organization", "server", "apiKey"],
+        "required": ["space", "catalog", "organization", "server"],
+
         "properties": {
           "space": {
             "anyOf": [
@@ -34,11 +35,27 @@
             "type": "string",
             "minLength": 2
           },
+          "username": {
+            "type": "string",
+            "minLength": 2
+          },
+          "password": {
+            "type": "string",
+            "minLength": 2
+          },
           "apiKey": {
             "type": "string",
             "minLength": 2
           }
         },
+        "oneOf": [
+          {
+            "required": ["username", "password"]
+          },
+          {
+            "required": ["apiKey"]
+          }
+        ],
         "additionalProperties": true
       }
     ]
