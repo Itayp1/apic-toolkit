@@ -47,7 +47,17 @@
     {
       "type": "input",
       "name": "apiKey",
-      "message": "Enter apiKey in development"
+      "message": "Enter apiKey in development (if you prefer to use username and password just press enter)"
+    },
+    {
+      "type": "input",
+      "name": "username",
+      "message": "Enter username in development (if you entered apiKey just press enter)"
+    },
+    {
+      "type": "input",
+      "name": "password",
+      "message": "Enter password in development (if you entered apiKey just press enter)"
     },
     {
       "type": "input",
